@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse_array_recursion</title>
+</head>
+<body>
+    <script>
+        let data = [12, 45, 23, 89, 7];
+
+        let temp;
+
+        let customReverse = (data, start, end) => {
+            
+            if(start <= end) {
+                temp = data[start];
+                data[start] = data[end];
+                data[end] = temp;
+                customReverse(data, start+1, end-1);
+            }
+            console.log(...data);
+        }
+
+        customReverse(data, 0, data.length-1);
+
+    </script>
+</body>
+</html>

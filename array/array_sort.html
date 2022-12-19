@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let data = [2, 40, 30, 12, 25, 45, 10, 78, 5, 56, 90, 21, 35];
+
+        for(let i = 0; i < data.length; i++) {
+
+            for(let j = 0; j < data.length; j++){
+                if (data[j] < data[j + 1]) {
+                    // data swapping
+                    let temp = data[j];/* temporary value is data[j] = 40 becz the data [0] = 40 */
+                    data[j] = data[j + 1] /* data[j] now is the value of data[j+1] means the index 1 */
+                    data[ j + 1] = temp; /* data [j + 1] is temp which means [j + 1 ] is now 40  */
+                }
+            }
+        }
+        console.log(data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect_recursion</title>
+</head>
+<body>
+    
+    <script>
+        let money = 100;
+        let totalApple = 0;
+
+        let buyApple = (x) => {
+            if( x >= 0) {
+                console.log(`I have ${x} rupees and ${totalApple}`);
+                buyMore(x);
+            } else {
+                console.log(`I don't have money to buy apple`)
+            }
+        }
+
+        let buyMore = (x) => {
+            totalApple++;
+            buyApple(x - 10)
+        }
+
+        buyApple(money);
+    </script>
+</body>
+</html>

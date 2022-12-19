@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack-string_reverse</title>
+</head>
+<body>
+    <script>
+        
+        let string = "Surya";
+
+        let data = [];
+
+        function push(new_val){
+            data[data.length] = new_val;
+        }
+        function pop(arr){
+            let itemRemoved = arr[arr.length - 1];
+            arr.length > 0 && arr.length--;
+            return itemRemoved;
+        }
+
+        let str_arr = string.split('');
+        let copy_str_arr = [...str_arr]
+
+        str_arr.forEach(char => push(pop(copy_str_arr)))
+
+        data.join("");
+        console.log(data);
+    </script>
+</body>
+</html>

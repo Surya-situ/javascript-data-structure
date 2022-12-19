@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head_&_tail_recursion</title>
+</head>
+<body>
+    
+
+    <script>
+        // let colors = () => { 
+        //     let data = 20; 
+        //     console.log(data);
+        // }
+
+        // let days =() => { 
+        //     colors();
+        // }
+
+        // let fruits = () => { 
+        //     days();
+        // }
+
+        // let topFunction =() => { 
+        //     fruits();
+        // }
+        // topFunction();
+
+        let num = (x) => {
+
+            console.log(x);
+            
+            if (x > 0) {
+                num(x - 1);
+            }
+        }
+        num(5)
+
+    </script>
+</body>
+</html>

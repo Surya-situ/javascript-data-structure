@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Stack : push_pop</h1>
+    <input type="text" placeholder="Enter stack ELement" id="newElm">
+    <button type="button" onclick="push()">Add element to stack</button>
+    <button type="button" onclick="pop()">Remove elem from stack</button>
+    <button type="button" onclick="display()">Display all elm of stack</button>
+
+
+
+
+    <script>
+        let data = [];
+        let dataUpdate = data.length;
+        let max = 5;
+
+        let push = () => {
+
+            let newData = document.getElementById('newElm').value
+            if(dataUpdate > 0) {
+                return;
+            } else {
+                data[dataUpdate] = newData;
+                dataUpdate++;
+                document.getElementById('newElm').value="";
+                console.log('Elm added')
+            }
+        }
+
+        let pop = () => {
+            if(dataUpdate > 0) {
+                dataUpdate --;
+                data.length = dataUpdate
+            } else {
+                alert(`Stack is empty`);
+                console.log('Elm deleted')
+            }
+        }
+
+        let display = () => {
+            for(let i=0; i <= dataUpdate; i++){
+                console.warn(`Stack element number ${i} and the value is ${data[i]}`);
+            }
+        }
+
+        // push(20)
+        // push(90)
+        // push(10)
+        // push(50)
+        // push(40)
+        // push(60)
+        // push(900)
+        // pop();
+        // console.log(data);
+    </script>
+</body>
+</html>
